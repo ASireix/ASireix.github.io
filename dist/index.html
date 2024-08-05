@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script type="module" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-whRUNsZP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DYYW5yBR.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="particles"></div>
+        <div id="menu_container">
+            <button id="previous-button" class="return-button position-fixed bg-transparent">
+                <img src="Images/return-icon.png" class="img-fluid">
+            </button>
+            <div id="mention-legale-text" class="h-100">
+                <h1 class="p-3 display-1 text-center position-relative">Mentions Légales</h1>
+                <div class="about text-center" style="max-height: 80%;">
+                    <h3>Responsable du site</h3>
+                    <p class="mb-3">
+                        Alexandre Sireix<br>
+                        22 chemin du mouniquet, 65800 Aureilhan<br>
+                        +33 7 81 75 94 82<br>
+                        av.sireix@gmail.com
+                    </p>
+                    
+                    <h3>Droits d'auteur</h3>
+                    <p class="mb-3">
+                        Tout le contenu de ce site, y compris textes, images, vidéos, et autres éléments, est protégé par les lois sur les droits d'auteur. Aucun contenu de ce site ne peut être utilisé ou reproduit sans autorisation préalable.
+                    </p>
+                    <h3>Finalité du site</h3>
+                    <p class="mb-3">
+                        Ce site web sert de portfolio personnel visant à présenter les travaux, projets, compétences, et réalisations d'Alexandre Sireix.
+                    </p>
+                    
+                    <h3>Politique de confidentialité</h3>
+                    <p class="mb-3">
+                        Ce site collecte des données personnelles uniquement lorsque cela est nécessaire pour répondre à des demandes ou à des besoins spécifiques des visiteurs.
+                    </p>
+                    
+                    <h3>Loi applicable</h3>
+                    <p class="mb-3">
+                        En cas de litige, la loi applicable sera celle du lieu de résidence du responsable du site.
+                    </p></div>
+            </div>
+            <div id="project-text">
+            </div>
+            <div id="render-menu">
+                <div class="container h-100 w-100">
+                    <div class="row h-100 ">
+                        <div class="col border-right">
+                            <canvas id="render-canvas" width="100%" height="100%" class="w-100 h-100">
+                            </canvas>
+                            <div id="gui-container" class="position-absolute top-0">
+                            </div>
+                        </div>
+                        <div class="col position-relative">
+                            <h3 class="display-3">Modélisation 3D</h3>
+                            <hr>
+                            <p class="lead">Tous mes modèles sont réalisés avec Blender et potentiellement texturé
+                                avec Substance Painter (je veux dire que certain on été texturé avec photoshop ou blender).
+                            </p>
+                            <hr>
+                            <h4>Liste des modèles</h4>
+                            <div id="models-list" class="rounded bg-secondary-subtle overflow-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="render-game">
+                <div class="h-100 bg-secondary-subtle mb-2">
+                    <iframe id="webgl-render" class="w-100 h-100" src=""></iframe>
+                </div>
+            </div>
+            <div class="container-fluid menu-parent">
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-md-3 row-gap-2">
+                    <div class="col">
+                        <button id="profil-button" class="menu-button position-relative">
+                            <img src="Images/Profil-icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>PROFIL</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="projects-button" class="menu-button position-relative">
+                            <img src="Images/backpack_icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>PROJETS</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="diplomes-button" class="menu-button position-relative">
+                            <img src="Images/scroll-icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>PARCOUR</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="games-button" class="menu-button position-relative">
+                            <img src="Images/game-icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>JEUX</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="modelisation-button" class="menu-button position-relative">
+                            <img src="Images/blender-icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>MODELISATION</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="mention-button" class="menu-button position-relative">
+                            <img src="Images/balance-icon.png" class="img-fluid">
+                            <div class="menu-content position-absolute left-50 translate-middle start-50">
+                                <p>MENTION LEGAL</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="profil" class="parallelogram">
+            <div id="profil-content">
+                <h1 class="mb-5">PROFIL</h1>
+
+                <h3>Nom : SIREIX</h3>
+                <h3>Prénom : Alexandre</h3>
+                <h3>Classe : Développeur</h3>
+                <a href="http://www.google.com" target="_blank"><button class="btn btn-secondary"><i class="bi bi-linkedin"></i></button></a>
+                <a href="https://vixy10.itch.io/" target="_blank"><button class="btn btn-secondary"><i class="bi bi-joystick"></i></button></a>
+                <a href="https://github.com/ASireix" target="_blank"><button class="btn btn-secondary"><i class="bi bi-github"></i></button></a>
+                
+                <h6 class="mt-2">Mail : av.sireix@gmail.com</h6>
+                <div class="shape"></div>
+                
+                <p class="lead mt-3">
+                    Bonjour, Alexandre Sireix, je réalise des jeux avec Unity et des logiciels en .NET.
+                </p>
+                
+                <p>
+                    Je suis passionné par tout le processus de création d'une application, 
+                    du design au développement (en laissant de côté le marketing). 
+                    Cependant, avec mes modestes compétences, je me concentre principalement sur la programmation et la modélisation 3D.
+                </p>
+
+                <p>
+                    En dehors du travail, je suis un fervent amateur de jeux vidéo, en particulier les jeux de combats
+                    et ceux mettant en scène des tanks. Je joue aussi du piano pour stimuler ma créativité.
+                </p>
+            </div>
+            <div id="diplomes-content">
+                <h1 class="mb-5">Parcour</h1>
+                <h3 class="mb-3">DIPLÔMES ET FORMATIONS</h3>
+                <div class="shape"></div>
+                <hr>
+                <p class="h5">2021 - 2023 | <strong>Master</strong><br> <i>Audiovisuel, Médias interactifs Numériques,
+                        Jeux</i></p>
+                <hr>
+                <p class="h5">2018 - 2021 | <strong>Licence</strong><br> <i>Informatique</i></p>
+                <h3 class="mt-5 mb-3">EXPÉRIENCES PROFESSIONNELLES</h3>
+                <div class="shape"></div>
+                <hr>
+                <p class="h5">Février 2023 - Juin 2023 | <br><strong>Développeur(stage)</strong><br> <i>MSA Berry Touraine</i></p>
+                <hr>
+                <p class="h5">Septembre 2023 | <br><strong>Développeur</strong><br> <i>MSA Berry Touraine</i></p>
+                <hr>
+                <p class="h5">Mars 2024 - Août 2024 | <br><strong>Service civique</strong><br> <i>Le Lien Pyrénées</i></p>
+            </div>
+        </div>
+        <div id="projects">
+            <h2 class="pb-3">Liste des projets</h2>
+            <ul class="list-unstyled" id="project-list">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
