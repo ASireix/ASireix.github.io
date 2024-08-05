@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\public\\Games",
+    "\\public\\Games\\golem",
+    "\\public\\Models_3D",
+    "\\public\\projects",
+    "\\src",
+    "\\src\\css",
+    "\\src\\scripts"
+  ],
+  "SelectedNode": "\\vite.config.js",
+  "PreviewInSolutionExplorer": false
+}
