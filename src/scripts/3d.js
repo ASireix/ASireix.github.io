@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GUI } from 'dat.GUI';
+import { GUI } from 'dat.gui';
 import modelsData from '/src/modelslist.json'
 
 const placeHolderPath = "/Models_3D/placeholder.png";
