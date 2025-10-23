@@ -1,6 +1,6 @@
 // Import our custom CSS
 import '/src/css/custom.scss';
-import $ from 'jquery';
+import '/src/scripts/jquery-global.js';
 import '/src/scripts/jquery.particleground.js';
 import '/src/scripts/background.js';
 import '/src/scripts/3d.js';

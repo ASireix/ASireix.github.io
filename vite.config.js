@@ -1,16 +1,11 @@
 const path = require('path');
 const commonjs = require('@rollup/plugin-commonjs');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
-import inject from "@rollup/plugin-inject";
 
 
 export default {
     base: '/',
     plugins: [
-        inject({   // => that should be first under plugins array
-            $: 'jquery',
-            jQuery: 'jquery',
-        }),
         commonjs(),
         nodeResolve({
             extensions: ['.js', '.jsx', '.ts', '.tsx']
