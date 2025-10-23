@@ -5,6 +5,7 @@ import inject from "@rollup/plugin-inject";
 
 
 export default {
+    base: '/',
     plugins: [
         inject({   // => that should be first under plugins array
             $: 'jquery',
